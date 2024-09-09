@@ -8,6 +8,15 @@ export function Signup() {
     event.preventDefault();
     setErrors([]);
     const params = new FormData(event.target);
+    axios
+      .post("http://localhost:3000/users.json", params)
+      .then((response) => {
+        console.log(response.data);
+      })
+      .catch((error) => {
+        console.log(error.response.data.errors);
+        setErrors(error.response.data.errors);
+      });
   };
 
   return (
