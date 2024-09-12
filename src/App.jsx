@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 // import { Content } from "./Content";
 import { Signup } from "./Signup";
 import { Login } from "./Login";
+import { LogHoursForm } from "./LogHoursForm";
 
 function App() {
   return (
@@ -10,6 +11,7 @@ function App() {
       <Routes>
         <Route path="/signup" element={<Signup />} />
         <Route path="/login" element={<Login />} />
+        <Route path="/hours" element={<LogHoursForm />} />
       </Routes>
     </Router>
   );
