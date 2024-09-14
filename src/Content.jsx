@@ -9,7 +9,7 @@ export function Content() {
     <div className="content-wrap">
       <Routes>
         <Route path="/signup" element={<Signup />} />
-        <Route path="/login" element={<Login />} />
+        <Route path="/" element={<Login />} />
         <Route path="/hours" element={<LogHoursForm />} />
         <Route path="/events" element={<AddEventForm />} />
       </Routes>
