@@ -1,22 +1,9 @@
-import { useEffect, useRef } from "react";
+import { useRef } from "react";
 import { Link } from "react-router-dom";
 
 export function Header() {
   const drawerRef = useRef(null);
   const buttonRef = useRef(null);
-  // const sidebar = document.getElementById("sidebar");
-  // const openSidebarButton = document.getElementById("open-sidebar");
-
-  // openSidebarButton.addEventListener("click", (e) => {
-  //   e.stopPropagation();
-  //   sidebar.classList.toggle("-translate-x-full");
-  // });
-
-  // document.addEventListener("click", (e) => {
-  //   if (!sidebar.contains(e.target) && !openSidebarButton.contains(e.target)) {
-  //     sidebar.classList.add("-translate-x-full");
-  //   }
-  // });
 
   const toggleDrawer = () => {
     if (drawerRef.current.classList.contains("-translate-x-full")) {
@@ -64,9 +51,9 @@ export function Header() {
               </Link>
             </li>
             <li className="mb-2">
-              <a href="#" className="block hover:text-[#E6AACE]">
+              <Link to="/events" className="block hover:text-[#E6AACE]">
                 Events
-              </a>
+              </Link>
             </li>
           </ul>
         </div>
