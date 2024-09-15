@@ -1,4 +1,5 @@
 import { useEffect, useRef } from "react";
+import { Link } from "react-router-dom";
 
 export function Header() {
   const drawerRef = useRef(null);
@@ -41,29 +42,29 @@ export function Header() {
     <div>
       <div
         ref={drawerRef}
-        className="absolute bg-gray-800 text-white w-56 min-h-screen overflow-y-auto transition-transform transform -translate-x-full ease-in-out duration-300"
+        className="absolute bg-cyan-500 text-white w-56 min-h-screen overflow-y-auto transition-transform transform -translate-x-full ease-in-out duration-300"
         id="sidebar"
       >
-        <div className="p-4">
-          <h1 className="text-2xl font-semibold">Sidebar</h1>
+        <div className="p-4 text-slate-800">
+          <h1 className="text-2xl font-semibold">Menu</h1>
           <ul className="mt-4">
             <li className="mb-2">
-              <a href="#" className="block hover:text-indigo-400">
+              <Link to="/login" className="block hover:text-[#E6AACE]">
                 Home
-              </a>
+              </Link>
             </li>
             <li className="mb-2">
-              <a href="#" className="block hover:text-indigo-400">
+              <a href="#" className="block hover:text-[#E6AACE]">
                 Another
               </a>
             </li>
             <li className="mb-2">
-              <a href="#" className="block hover:text-indigo-400">
-                Hours
-              </a>
+              <Link to="/hours" className="block hover:text-[#E6AACE]">
+                Log Hours
+              </Link>
             </li>
             <li className="mb-2">
-              <a href="#" className="block hover:text-indigo-400">
+              <a href="#" className="block hover:text-[#E6AACE]">
                 Events
               </a>
             </li>
@@ -72,10 +73,10 @@ export function Header() {
       </div>
       <div className="flex-1 flex flex-col overflow-hidden">
         {/* Navbar */}
-        <div className="bg-white shadow">
+        <div className="bg-cyan-100 shadow">
           <div className="container mx-auto">
             <div className="flex justify-between items-center py-4 px-2">
-              <h1 className="text-xl font-semibold">New Nav Drawer</h1>
+              <img src="src/assets/logo-transparent-png.png" alt="" className="h-20" />
               <button
                 ref={buttonRef}
                 onClick={toggleDrawer}
